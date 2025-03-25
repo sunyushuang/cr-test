@@ -5,6 +5,13 @@ import services.AuthService;
 import services.ProductService;
 
 public class Main {
+    /**
+     * Application entry point.
+     * 
+     * <p>Initializes the application by displaying the current environment configuration, registering and authenticating a new user, adding a product, and listing available products.</p>
+     *
+     * @param args the command-line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("应用启动，当前环境: " + Config.ENVIRONMENT);
         
