@@ -4,7 +4,7 @@ import models.User;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AuthService {
+public class authservice {
     // 模拟数据库
     private static Map<String, User> usersDb = new HashMap<>();
     
