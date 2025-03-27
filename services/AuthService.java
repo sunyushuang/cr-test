@@ -8,7 +8,7 @@ public class AuthService {
     // 模拟数据库
     private static Map<String, User> usersDb = new HashMap<>();
     
-    public static User registerUser(String username, String password, String email) {
+    public static User registeruser(String username, String password, String email) {
         // 问题：没有检查用户名是否已存在
         User user = new User(username, password, email);
         user.setId(usersDb.size() + 1);
