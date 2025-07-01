@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>现代计算器</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display">
+                <div class="history" id="history"></div>
+                <div class="current" id="current">0</div>
+            </div>
+            
+            <div class="buttons">
+                <!-- 第一行 -->
+                <button class="btn function" onclick="clearAll()">C</button>
+                <button class="btn function" onclick="clearEntry()">CE</button>
+                <button class="btn function" onclick="deleteLast()">⌫</button>
+                <button class="btn operator" onclick="inputOperator('/')">÷</button>
+                
+                <!-- 第二行 -->
+                <button class="btn number" onclick="inputNumber('7')">7</button>
+                <button class="btn number" onclick="inputNumber('8')">8</button>
+                <button class="btn number" onclick="inputNumber('9')">9</button>
+                <button class="btn operator" onclick="inputOperator('*')">×</button>
+                
+                <!-- 第三行 -->
+                <button class="btn number" onclick="inputNumber('4')">4</button>
+                <button class="btn number" onclick="inputNumber('5')">5</button>
+                <button class="btn number" onclick="inputNumber('6')">6</button>
+                <button class="btn operator" onclick="inputOperator('-')">-</button>
+                
+                <!-- 第四行 -->
+                <button class="btn number" onclick="inputNumber('1')">1</button>
+                <button class="btn number" onclick="inputNumber('2')">2</button>
+                <button class="btn number" onclick="inputNumber('3')">3</button>
+                <button class="btn operator" onclick="inputOperator('+')">+</button>
+                
+                <!-- 第五行 -->
+                <button class="btn function" onclick="toggleSign()">±</button>
+                <button class="btn number" onclick="inputNumber('0')">0</button>
+                <button class="btn function" onclick="inputDecimal()">.</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
+            
+            <!-- 科学计算器扩展按钮 -->
+            <div class="scientific-toggle">
+                <button class="btn function" onclick="toggleScientific()">科学</button>
+            </div>
+            
+            <div class="scientific-buttons" id="scientificButtons" style="display: none;">
+                <button class="btn function" onclick="inputFunction('sin(')">sin</button>
+                <button class="btn function" onclick="inputFunction('cos(')">cos</button>
+                <button class="btn function" onclick="inputFunction('tan(')">tan</button>
+                <button class="btn function" onclick="inputFunction('log(')">log</button>
+                <button class="btn function" onclick="inputFunction('ln(')">ln</button>
+                <button class="btn function" onclick="inputOperator('^')">x^y</button>
+                <button class="btn function" onclick="inputFunction('sqrt(')">√</button>
+                <button class="btn function" onclick="inputFunction('abs(')">|x|</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
